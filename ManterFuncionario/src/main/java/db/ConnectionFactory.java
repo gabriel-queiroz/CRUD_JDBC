@@ -9,7 +9,6 @@ public class ConnectionFactory {
 	
 	public Connection getConnection(){
 		
-		
 		String enderecoBanco = "jdbc:mysql://localhost/empresa";
 		
 		try {

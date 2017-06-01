@@ -147,27 +147,12 @@ public class Empresa {
 
 		new FuncionarioDAO().listar().forEach(System.out::println);
 
-		//funcionarios.forEach(f -> System.out.println(f));
-
-
+		
 		System.out.println("====================================");
 	
 	}
 	
 	private void excluir(){
-
-		/*
-
-		if(this.funcionarios.isEmpty()){
-
-			System.out.println("Ainda não existem Empregados Cadastrados");
-			System.out.println("=========================================");
-
-			return;
-		}
-		 */
-		
-		
 
 
 		System.out.println("Digite matricula do Empregado");
@@ -187,36 +172,10 @@ public class Empresa {
 
 		System.out.println("Usúario Excluído com sucesso!!!");
 		System.out.println("=================================");
-		/*
-
-		ArrayList<Funcionario> f = new ArrayList<>();
-
-	 	funcionarios.stream()
-				.filter(l -> l.getMatricula().contains(nome)).forEach(l -> f.add(l));
-
-	 	if(f.isEmpty()){
-
-	 		System.out.println("Funcionario  não cadastrado");
-	 		System.out.println("================================");
-	 		return;
-	 	}
-
-	 		this.funcionarios.remove(f.get(0));
-	 	System.out.println("Empregado Excluído com Sucesso");
-	 	System.out.println("=================================");
-
-		 */
+	
 	}
 	private void atualizar(){
 
-		/*
-
-		if(this.funcionarios.isEmpty()){
-
-			System.out.println("Não existem Empregados Cadastrados");
-			return;
-		}
-		 */
 
 		int op = 0;
 
@@ -280,11 +239,6 @@ public class Empresa {
 		String matricula = inputS.nextLine();
 
 
-		/*
-		funcionarios.stream().filter(l -> l.getMatricula().equals(matricula))
-			.forEach(l-> System.out.println(l));
-		 */
-
 		Funcionario f = new FuncionarioDAO().pesquisarUsuario(matricula);
 
 		if(f== null){
@@ -310,11 +264,6 @@ public class Empresa {
 
 
 	private Funcionario mostrarInformacaoes(String matricula){
-
-		/*
-		funcionarios.stream().filter(l -> l.getMatricula().equals(matricula))
-			.forEach(l-> System.out.println(l));
-		 */
 
 		Funcionario f = new FuncionarioDAO().pesquisarUsuario(matricula);
 
